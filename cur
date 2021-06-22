@@ -1,0 +1,14 @@
+npm install m3ujs --save
+npm install m3ujs@next --save
+import { Playlist } from 'm3ujs/playlist';
+import { Mp3Entry } from 'm3ujs/mp3-entry';
+import { TypeEXTM3U } from 'm3ujs/type';
+
+const playlist = new Playlist(new TypeEXTM3U(entry => {
+  if (entry instanceof Mp3Entry) {
+    return `${entry.artist} - ${entry.album} - ${entry.track} - ${entry.title}`;
+  }
+  return entry.displayName;
+}));
+playlist.add(new Mp3Entry('/path/to/test.mp3'));
+playlist.write('/pat/to/playlist.m3u');
