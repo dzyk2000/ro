@@ -1,7 +1,7 @@
 npm install m3ujs --save
 npm install m3ujs@next --save
-import { Playlist } from 'm3ujs/playlist';
-import { Mp3Entry } from 'm3ujs/mp3-entry';
+import { Playlist } from 'https://raw.githubusercontent.com/dzyk2000/roiptv.m3u/main/ro.m3u';
+import { Mp3Entry } from 'https://raw.githubusercontent.com/dzyk2000/roiptv.m3u/main/ro.m3u-entry';
 import { TypeEXTM3U } from 'm3ujs/type';
 
 const playlist = new Playlist(new TypeEXTM3U(entry => {
